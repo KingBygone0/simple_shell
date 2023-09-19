@@ -48,7 +48,6 @@ int main(int __attribute__((unused)) argc, char *argv[])
 	if (command == NULL)
 		continue;
 	process_command(command, args, num_args, program_name);
-	free(input);
 	}
 	free(input);
 	return (0);
