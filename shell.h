@@ -31,7 +31,7 @@ int my_setenv(const char *name, const char *value, int overwrite);
 int my_unsetenv(const char *name);
 char *int_to_string(int num);
 void display_prompt(void);
-void execute_exit(char **args);
+void execute_exit(const char *command, char **args);
 void execute_env(void);
 int execute_command(const char *program_name,
                 const char *command, char *args[]);

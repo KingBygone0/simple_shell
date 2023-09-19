@@ -27,7 +27,7 @@ int main(int __attribute__((unused)) argc, char *argv[])
 	char *input = NULL, *command, *args[MAX_INPUT_LENGTH];
 	size_t input_length = 0;
 	int num_args;
-	char *program_name = argv[0], *processed_input;
+	char *program_name = argv[0];/*processed_input;*/
 
 	if (program_name == NULL)
 		program_name = argv[0];
@@ -44,17 +44,16 @@ int main(int __attribute__((unused)) argc, char *argv[])
 		free(input);
 		continue;
 	}
-	processed_input = handle_variables(input, program_name, getpid());
+	/*processed_input = handle_variables(input, program_name, getpid());
 	if (processed_input == NULL)
 	{
 		free(input);
 		continue;
-	}
-	tokenize_input_line(processed_input, &command, args, &num_args);
+	}*/
+	tokenize_input_line(input, &command, args, &num_args);
 	if (command == NULL)
 		continue;
 	process_command(command, args, num_args, program_name);
-	free(processed_input);
 	}
 	free(input);
 	return (0);

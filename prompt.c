@@ -16,13 +16,13 @@ void display_prompt(void)
  * execute_exit - Exit the shell with a specified status code.
  * @args: An array of arguments. args[1] contains the status code (optional).
  */
-void execute_exit(char **args)
+void execute_exit(const char *command, char **args)
 {
 	int status = 0;
 
-	if (args[1] != NULL)
+	if (command != NULL)
 	{
-		status = my_Atoi(args[1]);
+		status = my_Atoi(*args);
 		if (status == 0 && compare(args[1], "0") != 0)
 		{
 			perror("Invalid status");

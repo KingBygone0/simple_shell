@@ -14,7 +14,7 @@ void process_command(const char *command, char **args,
 		int num_args, const char *program_name)
 {
 	if (compare(command, "exit") == 0)
-		execute_exit(args);
+		execute_exit(command, args);
 	else if (compare(command, "env") == 0)
 		execute_env();
 	else if (compare(command, "cd") == 0)
