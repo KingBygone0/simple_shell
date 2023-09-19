@@ -48,8 +48,9 @@ char *sub_string(const char *longstring, const char *single)
 		{
 			return ((char *)longstring);
 		}
-		longstring++;
+			longstring++;
 	}
+
 	return (NULL);
 }
 
