@@ -44,12 +44,6 @@ int main(int __attribute__((unused)) argc, char *argv[])
 		free(input);
 		continue;
 	}
-	/*processed_input = handle_variables(input, program_name, getpid());
-	if (processed_input == NULL)
-	{
-		free(input);
-		continue;
-	}*/
 	tokenize_input_line(input, &command, args, &num_args);
 	if (command == NULL)
 		continue;

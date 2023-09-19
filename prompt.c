@@ -15,6 +15,7 @@ void display_prompt(void)
 /**
  * execute_exit - Exit the shell with a specified status code.
  * @args: An array of arguments. args[1] contains the status code (optional).
+ * @command: read
  */
 void execute_exit(const char *command, char **args)
 {
